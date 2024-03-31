@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            padding: 10px;
+            width: calc(100% - 80px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+        .input-group button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff69b4;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .input-group button:hover {
+            background-color: #d1478e;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="birthdayContainer">
+        <!-- Your birthday content here -->
+        <h1>Happy Birthday</h1>
+        <p>生日快樂</p>
+        <p>お诞生日おめでとございます</p>
+        <p>생일축하함니다</p>
+        <p>Joyeux Anniversaire.</p>
+        <p>iFeliz CumpleaRos!</p>
+        
+        <div class="input-group">
+            <input type="password" placeholder="密碼">
+            <button onclick="showMessage()">確認密碼</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="blessingContainer">
+        <!-- Your blessing content here -->
+		   <!-- Add a button to navigate to the next page -->
+<button onclick="nextPage()" style="position: fixed; bottom: 80px; right:80px; background-color: #ff69b4; color: #fff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; font-size: 16px;">9.0</button>
+        <h1>🎂🎉🎈🥳</h1>
+        <p>
+            <strong>🈸️日快樂🎂🎂🎂</strong><br>兩個相似的人相處在一起可以獲得很多能量也正因為相似所以知道對方的感受大概都是什麼，也很容易理解並且感同身受，這是好難得的事情。
+        </p>
+        <p>
+            不管是練球還是讀書準備考試都辛苦了，要好好讀書，不要被當。我覺得認真的男人最有魅力ㄌ。目前的我們都很忙碌，我不喜歡太急促的任何事情，一步一步慢慢來我覺得很好，我不喜歡有壓力的感覺，希望我們都往彼此想要的未來在前進。你是很貼心的男生，雖然我常常鬧你有很多女生，我都是說說的。雖然有幾次是真的吃醋???超ㄏ@@，不過大多都沒有，我是不會生氣ㄉ。你的細心希望可以用在自己身上多一點，要好好照顧自己。<br><br>
+            而我的三月很溫暖也很開心，一部分是因為有你，喔然後也謝謝你常常為我伴奏，讓我的生活充滿喇叭聲，希望你下次吹小聲一點。<br><br>
+            20歲開始了～好好享受接下來的生活！
+        </p>
+    </div>
+
+    <!-- Next Page Container -->
+    <div class="container hidden" id="nextPageContainer">
+        <!-- Your next page content here -->
+        <h1>點小八一下</h1>
+        <a href="https://youtu.be/-R0vBJZ9kS8?si=dxcrREVZFVZcPYyW" target="_blank">
+            <img src="data:image/jpeg;base64,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" alt="點我">
+        </a>
+    </div>
+
+    <script>
+        function showMessage() {
+            var password = document.querySelector('input[type="password"]').value;
+            if (password === "0401") {
+                document.getElementById("birthdayContainer").classList.add("hidden");
+                document.getElementById("blessingContainer").classList.remove("hidden");
+            } else {
+                alert("好笨不知道密碼是什麼0!而"); // 提示框
+            }
+        }
+
+        function nextPage() {
+            document.getElementById("blessingContainer").classList.add("hidden");
+            document.getElementById("nextPageContainer").classList.remove("hidden");
+        }
+    </script>
+
+
+
+
+</body>
+</html>
